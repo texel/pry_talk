@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>code_examples.rb</title>
+	<style type="text/css">
+/* Stylesheet generated from TextMate theme
+ *
+ * GitHub
+ * 
+ *
+ */
+
+/* Mostly to improve view within the TextMate HTML viewer */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+pre.textmate-source {
+	margin: 0;
+	padding: 0 0 0 15px;
+	font-family: Menlo-Regular, monospace;
+	font-size: 18px;
+	line-height: 1.3em;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+pre.textmate-source.github {
+	color: #000000;
+	background-color: #F8F8FF;
+}
+
+pre.textmate-source .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #888;
+	background-color: #eee;
+}
+pre.textmate-source.github span {
+   padding-top: 0.2em;
+   padding-bottom: 0.1em;
+}
+pre.textmate-source.github ::selection {
+	background-color: #BCD5FA;
+}
+/* Source */
+pre.textmate-source.github .source {
+	background-color: #F8F8FF;
+}
+
+/* Comment */
+pre.textmate-source.github .comment {
+	color: #999988;
+	font-style: italic;
+}
+
+/* Keyword */
+pre.textmate-source.github .keyword, pre.textmate-source.github .storage {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* Keyword operator */
+pre.textmate-source.github .keyword_operator_assignment {
+	color: #000000;
+}
+
+/* keyword like new */
+pre.textmate-source.github .keyword_other_special-method {
+}
+
+/* Function (definition) */
+pre.textmate-source.github .entity_name_function, pre.textmate-source.github .keyword_other_name-of-parameter_objc {
+	color: #990000;
+	font-weight: bold;
+}
+
+/* Class (definition) */
+pre.textmate-source.github .entity_name {
+	color: #445588;
+	font-weight: bold;
+}
+
+/* Number */
+pre.textmate-source.github .constant_numeric {
+	color: #009999;
+}
+
+/* Variable */
+pre.textmate-source.github .variable_language, pre.textmate-source.github .variable_other {
+	color: #108888;
+}
+
+/* Built-in constant */
+pre.textmate-source.github .constant_language {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* Variable */
+pre.textmate-source.github .variable_other_constant_ruby {
+	color: #0F8787;
+}
+
+/* Built-in constant */
+pre.textmate-source.github .constant_language {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* String */
+pre.textmate-source.github .string {
+	color: #DD1144;
+}
+
+/* Inherited class */
+pre.textmate-source.github .entity_other_inherited-class {
+	color: #0F8787;
+}
+
+/* Inherited class seperator */
+pre.textmate-source.github .punctuation_separator_inheritance {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* punctuation block */
+pre.textmate-source.github .punctuation_separator_variable {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* array brackets */
+pre.textmate-source.github .punctuation_section_array {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* hash separator */
+pre.textmate-source.github .punctuation_separator_key-value {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* () brackets */
+pre.textmate-source.github .punctuation_section_function {
+	color: #000000;
+}
+
+/* hash brackets */
+pre.textmate-source.github .punctuation_section_scope {
+	color: #000000;
+}
+
+/* Special ruby method */
+pre.textmate-source.github .keyword_other_special-method_ruby {
+	font-weight: bold;
+}
+
+/* symbol */
+pre.textmate-source.github .constant_other_symbol {
+	color: #AA2C8C;
+}
+
+/* Support class */
+pre.textmate-source.github .support_class_ruby {
+	color: #008080;
+}
+
+/* String.regexp */
+pre.textmate-source.github .string_regexp {
+	color: #009926;
+}
+
+/* String embedded source */
+pre.textmate-source.github .string_quoted .source {
+	color: #000000;
+}
+
+/* doctype punctation */
+pre.textmate-source.github .meta_tag_sgml_html {
+	color: #999999;
+	font-weight: bold;
+}
+
+/* doctype declaration */
+pre.textmate-source.github .entity_name_tag_doctype {
+	color: #999999;
+	font-weight: bold;
+}
+
+/* doctype string */
+pre.textmate-source.github .string_quoted_double_doctype {
+	color: #999999;
+	font-weight: bold;
+}
+
+/* html tag punctuation */
+pre.textmate-source.github .punctuation_definition_tag {
+	color: #121289;
+}
+
+/* html tag punctuation */
+pre.textmate-source.github .entity_name_tag {
+	color: #121289;
+}
+
+/* html attribute */
+pre.textmate-source.github .entity_other_attribute-name {
+	color: #0A8585;
+}
+
+/* html attribute punctation */
+pre.textmate-source.github .entity_other_attribute-name {
+	color: #0A8585;
+}
+
+/* erb tags */
+pre.textmate-source.github .punctuation_section_embedded_ruby {
+	color: #999999;
+	font-weight: bold;
+}
+
+/* ruby string interpolation */
+pre.textmate-source.github .source_ruby_embedded_source .punctuation_section_embedded_ruby {
+	color: #CF1040;
+}
+
+/* css brackets */
+pre.textmate-source.github .punctuation_section_property-list_css {
+}
+
+/* css property */
+pre.textmate-source.github .support_type_property-name_css {
+	font-weight: bold;
+}
+
+/* css property punctuation */
+pre.textmate-source.github .punctuation_separator_key-value_css {
+	color: #000000;
+}
+
+/* css property value */
+pre.textmate-source.github .meta_property-value, pre.textmate-source.github .constant_other_color {
+	color: #009999;
+}
+
+/* css ending */
+pre.textmate-source.github .punctuation_terminator_rule_css {
+	color: #000000;
+}
+
+/* css font */
+pre.textmate-source.github .support_constant_font-name {
+	color: #000000;
+}
+
+/* css keyword */
+pre.textmate-source.github .keyword_other_unit {
+	color: #009999;
+}
+
+/* pseudo class */
+pre.textmate-source.github .entity_other_attribute-name_pseudo-class {
+	color: #000000;
+}
+
+/* css constant property value */
+pre.textmate-source.github .support_constant_property-value {
+	color: #000000;
+	font-weight: bold;
+}
+
+/* css attribute class */
+pre.textmate-source.github .entity_other_attribute-name_class {
+	color: #445588;
+	font-weight: bold;
+}
+
+/* css attribute id */
+pre.textmate-source.github .entity_other_attribute-name_id {
+	color: #990000;
+	font-weight: bold;
+}
+
+/* diff header from */
+pre.textmate-source.github .meta_diff_header_from-file {
+	color: #000000;
+	background-color: #FFDDDD;
+}
+
+/* diff header to */
+pre.textmate-source.github .meta_diff_header_to-file {
+	color: #000000;
+	background-color: #DDFFDD;
+}
+
+/* diff inserted */
+pre.textmate-source.github .markup_inserted_diff {
+	background-color: #DDFFDD;
+}
+
+/* diff deleted */
+pre.textmate-source.github .markup_deleted_diff {
+	color: #000000;
+	background-color: #FFDDDD;
+}
+
+
+
+	</style>
+</head>
+
+<body><pre class="textmate-source github"><span class="source source_ruby source_ruby_rails"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> $ rvm use 1.9.3@pry_talk
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> $ set theme to tomorrow night bright presentation
+</span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> What is Pry?
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> REPL (Read Eval Print Loop)
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Intended as a replacement for IRB (feature set is a superset of IRB)
+</span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Installing Pry
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> $ gem install pry pry-doc
+</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry paginates results, colors syntax, and pretty prints by default.
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Long output gets piped to less, which lets you navigate and search 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> returned values
+</span>
+<span class="variable variable_other variable_other_constant variable_other_constant_ruby">ENV</span>
+  
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry can be used to browse rdoc documentation
+</span>
+show<span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>doc <span class="variable variable_other variable_other_constant variable_other_constant_ruby">Array</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>each
+</span>? pry
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry has a number of built-in variables.
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Last file reference…
+</span>
+_file_
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Last object returned (just like IRB)
+</span>
+_
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> We can also show the source code from a method
+</span>
+show<span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>method pry
+$ <span class="variable variable_other variable_other_constant variable_other_constant_ruby">Array</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>each
+</span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> If we need a bit more context, print out line numbers
+</span>
+$ <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>l pry
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Prepend shell commands with a .
+</span>
+<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>pwd
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> There are also some convenient gem-related commands
+</span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">gem</span><span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>cd</span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">gem</span><span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>open</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry allows some pretty powerful object introspection and 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> stack navigation
+</span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Create a new person…
+</span>
+<span class="meta meta_require meta_require_ruby"><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">require</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>./person<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span></span>
+leigh <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="support support_class support_class_ruby">Person</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Oh no, looks like Person#initialize takes 2 arguments.
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> That showed us the error, so let's get a little more 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> information about the backtrace
+</span>
+wtf?
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> That shows the backtrace for the last error thrown. As expected, 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> it happened in Person#initialize. 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> So let's look at the documentation for that method... 
+</span>
+? <span class="variable variable_other variable_other_constant variable_other_constant_ruby">Person</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>initialize
+</span>
+leigh <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="support support_class support_class_ruby">Person</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span><span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">new</span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Leigh<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="constant constant_numeric constant_numeric_ruby">5.7</span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="constant constant_numeric constant_numeric_ruby">155</span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span>
+cd leigh
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> So now my execution scope is actually *inside* the Person object, 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> and I can confirm this with another built-in command:
+</span>
+whereami
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> So now I can print out state that I normally wouldn't be able to 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> easily access, such as instance variables
+</span>
+<span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>weight</span>
+<span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>height</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> I can also list the constants, methods, and variables in 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> the current scope
+</span>
+ls
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> … or in other scopes
+</span>
+ls <span class="variable variable_other variable_other_constant variable_other_constant_ruby">String</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry also integrates w/ my editor, to let me edit my code
+</span>
+edit <span class="variable variable_other variable_other_constant variable_other_constant_ruby">Person</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>description #put in a binding.pry, save and close - 
+</span>
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry also lets me drop into a REPL from within running code
+</span>
+cd <span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">..</span>
+leigh<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>description
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> Pry lets you manipulate the input buffer, so typing the wrong 
+</span><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> thing isn't quite as frustrating
+</span>
+<span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">helo</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">string</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+  puts <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>hello <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>string<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+amend<span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-</span>line <span class="constant constant_numeric constant_numeric_ruby">1</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">hello</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">string</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class="keyword keyword_control keyword_control_ruby">end</span>
+
+<span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> I can also use ! to bug out of input completely
+</span>!
+</span></pre>
+</body>
+</html>
