@@ -20,15 +20,6 @@ ENV
 show-doc Array#each
 ? pry
 
-# Pry has a number of built-in variables.
-# Last file reference…
-
-_file_
-
-# Last object returned (just like IRB)
-
-_
-
 # We can also show the source code from a method
 
 show-method pry
@@ -44,8 +35,8 @@ $ -l pry
 
 # There are also some convenient gem-related commands
 
-gem-cd
-gem-open
+gem-list
+gem-open json
 
 # Pry allows some pretty powerful object introspection and 
 # stack navigation
@@ -67,7 +58,13 @@ wtf?
 
 ? Person#initialize
 
-leigh = Person.new('Leigh', 5.7, 155)
+Person.new('Leigh', 5.7, 155)
+
+# Oh no, I forgot to store that person in a variable!
+# Luckily, just like IRB, Pry lets me use _ to get at
+# the last variable.
+leigh = _
+
 cd leigh
 
 # So now my execution scope is actually *inside* the Person object, 
